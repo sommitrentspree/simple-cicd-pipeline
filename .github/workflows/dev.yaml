@@ -19,7 +19,7 @@ jobs:
         run: echo "SHORT_SHA=`echo ${GITHUB_SHA} | cut -c1-8`" >> $GITHUB_ENV
 
       - name: Get CONTAINER_IMAGE
-        run: echo "CONTAINER_IMAGE=asia.gcr.io/$PROJECT_ID/example-app:${SHORT_SHA}" >> $GITHUB_ENV
+        run: echo "CONTAINER_IMAGE=asia.gcr.io/$PROJECT_ID/lunar-workshop-example-app:${SHORT_SHA}" >> $GITHUB_ENV
 
       - name: Setup gcloud CLI
         uses: google-github-actions/setup-gcloud@v0
@@ -53,5 +53,5 @@ jobs:
           export_default_credentials: true
 
       - name: Deploy
-        run: gcloud run deploy dev-example-app --image ${{needs.build.outputs.CONTAINER_IMAGE}} --region asia-southeast1 --platform managed
+        run: gcloud run deploy lunar-workshop-dev-example-app --image ${{needs.build.outputs.CONTAINER_IMAGE}} --region asia-southeast1 --platform managed
 

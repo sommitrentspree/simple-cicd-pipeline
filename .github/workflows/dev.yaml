@@ -6,7 +6,7 @@ on:
       - develop
 
 env:
-  PROJECT_ID: knowledgesharing-362702
+  PROJECT_ID: hackspree
 
 jobs:
   build:

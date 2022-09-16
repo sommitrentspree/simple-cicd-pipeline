@@ -2,7 +2,7 @@ FROM golang:1.19.1-alpine3.16 as builder
 
 WORKDIR /app
 
-RUN go run build -o app
+RUN go build -o app
 
 FROM alpine:3.16
 

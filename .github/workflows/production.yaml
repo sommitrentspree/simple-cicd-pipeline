@@ -15,8 +15,6 @@ jobs:
   deploy:
     name: Deploy to Cloud Run
     runs-on: ubuntu-20.04
-    needs:
-      - build
     steps:
       - name: Setup gcloud CLI
         uses: google-github-actions/setup-gcloud@v0

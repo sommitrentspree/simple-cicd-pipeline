@@ -3,7 +3,7 @@ name: dev
 on:
   push:
     branches:
-      - develop
+      - main
 
 env:
   PROJECT_ID: hackspree

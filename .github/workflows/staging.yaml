@@ -39,7 +39,7 @@ jobs:
   
   deploy:
     name: Deploy to Cloud Run
-    runs-on: ubuntu-18.04
+    runs-on: ubuntu-20.04
     needs:
       - build
     steps:

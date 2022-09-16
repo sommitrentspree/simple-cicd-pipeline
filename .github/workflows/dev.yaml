@@ -15,6 +15,9 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
+      - name: Add SHORT_SHA to ENV
+        run: echo "SHORT_SHA=`echo ${GITHUB_SHA} | cut -c1-8`" >> $GITHUB_ENV
+
       - name: Get CONTAINER_IMAGE
         run: echo "CONTAINER_IMAGE=asia.gcr.io/$PROJECT_ID/example-app:${SHORT_SHA}" >> $GITHUB_ENV
 
